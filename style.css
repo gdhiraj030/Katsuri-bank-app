@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  display: none;
+}
+
+.login__container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem;
+}
+
+.login__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.login__form {
+  width: 100%;
+}
+
+.login__form-group {
+  margin-bottom: 1rem;
+}
+
+.login__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.login__input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.login__input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.login__button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login__button:hover {
+  background-color: #4338ca;
+}
+
+.login__forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.login__forgot-password:hover {
+  color: #4f46e5;
+}
+
+@media (max-width: 480px) {
+  .login__container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
+/* app */
+.app {
+  background-color: violet;
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app__container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 5vw;
+}
+
+.app__summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ 
+}
+.total__balance {
+  text-align: right;
+}
+.app__transaction {
+  background-color: blue;
+  /* padding: 5vw 0; */
+
+  
+}
+.transaction__history{
+background-color: pink;
+height: 80%;
+overflow-y: scroll;
+}
+.balance__summary{
+  background-color: #eb1b00;
+  display: flex;
+  height: 20%;
+  justify-content: space-between;
+}
+.operation__container {
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 5vw 0;
+  gap: 2vw;
+}
+.operation {
+  border: 2px solid black;
+
+  padding: 16px;
+}
+.operation input {
+  padding: 3px;
+}
+.operation label {
+  display: block;
+  padding: 3px 0;
+}
+.operation button {
+  padding: 3px;
+  border-radius: 2px;
+}
+.operation--send {
+  background-color: #56eb00;
+}
+.operation--loan {
+  background-color: #eb00d8;
+}
+.operation--close {
+  background-color: #eb1b00;
+}

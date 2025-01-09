@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katsuri Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="main">
+    <nav class="login">
+      <div class="login__container">
+        <h1 class="login__title">Welcome Back</h1>
+        <form class="login__form">
+          <div class="login__form-group">
+            <label class="login__label" for="email">Email</label>
+            <input class="login__input" type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="login__form-group">
+            <label class="login__label" for="password">Password</label>
+            <input class="login__input" type="password" id="password" name="password" placeholder="Enter your password"
+              required>
+          </div>
+          <button type="submit" class="login__button">Sign In</button>
+        </form>
+        <a href="#" class="login__forgot-password">Forgot your password?</a>
+      </div>
+    </nav>
+
+    <div class="app">
+      <div class="app__container">
+        <div class="app__title">
+          <h1>hello john</h1>
+        </div>
+        <div class="total__balance">
+          <h1>total: <span>£1000</span></h1>
+        </div>
+        <!-- app summary -->
+        <div class="app__summary">
+          <div class="app__transaction">
+            <div class="transaction__history">
+              <div class="transaction--row">
+                <span>1.</span>
+                <p>deposited</p>
+                <p>£400</p>
+              </div>
+              <div class="transaction--row">
+                <span>2.</span>
+                <p>withdrawal</p>
+                <p>£400</p>
+              </div>
+            </div>
+            <div class="balance__summary">
+              <div class="balance--income">
+                
+                <p>income: <span>£500</span></p>
+              </div>
+              <div class="balance--outcome">
+                <p>outcome: <span> £400</span></p>
+                
+              </div>
+              <div class="balance--sort">
+                <button>sort</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- operation -->
+          <div class="operation__container">
+
+            <!-- transfer money -->
+            <div class="operation operation--send">
+              <form action="">
+                <label for="reciever">reciever</label>
+                <input type="text" placeholder="reciever account" id="reciever">
+                <button type="submit">send</button>
+              </form>
+            </div>
+            <!-- request loan -->
+            <div class="operation operation--loan">
+              <form action="">
+                <label for="loan">request loan</label>
+                <input type="text" placeholder="amount" id="loan">
+                <button type="submit">request</button>
+              </form>
+            </div>
+            <!-- close account -->
+            <div class="operation operation--close">
+              <label for="close">close account</label>
+              <input type="text" placeholder="account" id="close">
+              <button type="submit">close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f0f2f5;
+    }
+
+    .page {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      display: none;
+      min-height: 100vh;
+      background: white;
+    }
+
+    .page:target {
+      display: block;
+    }
+
+    #login {
+      display: block;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 24px;
+      color: #1a73e8;
+      margin: 40px 0;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .balance-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .balance-label {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .balance-amount {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .action-btn {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .transaction {
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .transaction-details h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .transaction-details p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .amount {
+      font-weight: bold;
+    }
+
+    .amount.negative {
+      color: #dc3545;
+    }
+
+    .amount.positive {
+      color: #28a745;
+    }
+
+    .transfer-form {
+      margin-top: 20px;
+    }
+
+    .back-btn {
+      color: #1a73e8;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Login Page -->
+  <div id="login" class="page">
+    <div class="logo">🏦 Mobile Banking</div>
+    <div class="input-group">
+      <input type="text" placeholder="Username">
+    </div>
+    <div class="input-group">
+      <input type="password" placeholder="Password">
+    </div>
+    <a href="#dashboard" class="btn">Login</a>
+  </div>
+
+  <!-- Dashboard Page -->
+  <div id="dashboard" class="page">
+    <div class="header">
+      <h2>Welcome, John</h2>
+      <a href="#login">Logout</a>
+    </div>
+
+    <div class="balance-card">
+      <div class="balance-label">Available Balance</div>
+      <div class="balance-amount">$5,420.50</div>
+      <div>**** **** **** 4321</div>
+    </div>
+
+    <div class="actions">
+      <a href="#transfer" class="action-btn">
+        Transfer
+      </a>
+      <a href="#" class="action-btn">
+        Cards
+      </a>
+      <a href="#" class="action-btn">
+        Bills
+      </a>
+    </div>
+
+    <h3>Recent Transactions</h3>
+    <div class="transaction">
+      <div class="transaction-details">
+        <h3>Grocery Store</h3>
+        <p>Jan 6, 2025</p>
+      </div>
+      <div class="amount negative">-$65.30</div>
+    </div>
+    <div class="transaction">
+      <div class="transaction-details">
+        <h3>Salary Deposit</h3>
+        <p>Jan 5, 2025</p>
+      </div>
+      <div class="amount positive">+$3,000.00</div>
+    </div>
+  </div>
+
+  <!-- Transfer Page -->
+  <div id="transfer" class="page">
+    <a href="#dashboard" class="back-btn">← Back</a>
+    <h2>Transfer Money</h2>
+    <div class="transfer-form">
+      <div class="input-group">
+        <input type="text" placeholder="Recipient Account Number">
+      </div>
+      <div class="input-group">
+        <input type="number" placeholder="Amount">
+      </div>
+      <div class="input-group">
+        <input type="text" placeholder="Description (Optional)">
+      </div>
+      <a href="#dashboard" class="btn">Send Money</a>
+    </div>
+  </div>
+</body>
+</html>
