@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>kasturi bank</title>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,24 @@
 <body>
 
   <div class="app">
+    <div class="login__container">
+      <div class="logo">
+        <img src="./logo/logo.png" alt="">
+      </div>
+      <form action="">
+        <label for="username">
+          username
+        </label>
+        <input class="login--username" type="text" id="username" required>
+        <label for="password">
+          password
+        </label>
+        <input class="login--password" type="password" id="password">
+        <button class="login--btn" type="submit">Login</button>
+        <p class="or"><span></span> or <span></span></p>
+        <a class="login--forget" href="#"> forget password</a>
+      </form>
+    </div>
     <div class="app__container">
       <div class="logo">
         <img src="./logo/logo.png" alt="">
@@ -39,18 +57,14 @@
             <p>2.<span class="type type--withdrawal">withdrawal</span></p>
             <p>- €500</p>
           </div>
-          
-          
-          
-
         </div>
         <!-- summary -->
         <div class="transaction__summary">
           <div class="income">
-            <p class="label--income"><span>IN:</span> €1000</p>
+            <span>In: </span><p class="label--income"><span> €1000</p>
           </div>
           <div class="outcome">
-            <p class="label--outcome"><span>OUT:</span> - €100</p>
+           <span>Out: </span> <p class="label--outcome"> - €100</p>
           </div>
 
           <div class="sort sort--btn">
@@ -66,7 +80,7 @@
           <p>transfer money</p>
           <form action="">
             <input class="receiver--input" type="text" placeholder="receiver account">
-            <input class="receiver--password" type="password" placeholder="password">
+            <input class="receiver--amount" type="number" placeholder="amount">
             <button class="send--btn" type="submit">send</button>
           </form>
         </div>
@@ -75,7 +89,6 @@
           <p>request loan</p>
           <form action="">
             <input class="loan--input" type="text" placeholder="receiver account">
-            
             <button class="loan--btn" type="submit">send</button>
           </form>
         </div>
